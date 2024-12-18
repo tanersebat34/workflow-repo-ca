@@ -1,142 +1,124 @@
 # Workflow Assignment - Development Setup
 
-This README contains details about my workflow setup for this project, including development tools, testing, and steps I followed.
-
----
-
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Setup Instructions](#setup-instructions)
-3. [Development Tools](#development-tools)
-4. [Testing](#testing)
-   - [Unit Tests](#unit-tests)
-   - [End-to-End Tests](#end-to-end-tests)
-5. [Scripts](#scripts)
-6. [Environment Variables](#environment-variables)
-7. [Checklist](#checklist)
-
----
-
-## Project Overview
-
 This project demonstrates a proper **development workflow**. I have configured ESLint, Prettier, and implemented pre-commit hooks. I have also added unit tests (Vitest) and end-to-end tests (Playwright) to ensure code quality and functionality.
-
----
 
 ## Setup Instructions
 
-1. **Fork the Repository**:
-   I forked the repository from Noroff class repository to my GitHub account.
+To set up the project:
+
+1. **Fork the Repository**: I forked the repository from Noroff to my GitHub account.
 
 2. **Clone the Project**:
 
-´´´bash
-git clone https://github.com/<your-username>/workflow-repo-ca.git
-´´´
+   ```bash
+   git clone https://github.com/<your-username>/workflow-repo-ca.git
+   cd workflow-repo-ca
+   ```
 
-´´´bash
-cd workflow-repo-ca
-´´´
+3. **Create a New Branch**: I created the `workflow` branch to manage all my changes:
 
-3. Create a New Branch:
-   I created the workflow branch to manage all my changes:
+   ```bash
+   git checkout -b workflow
+   ```
 
-´´´bash
-git checkout -b workflow
-´´´
-
-4. Install Dependencies:
-   Run the following command
-
-´´´bash
-npm install
-´´´
-
----
+4. **Install Dependencies**: Run the following command:
+   ```bash
+   npm install
+   ```
 
 ## Development Tools
 
-ESLint & Prettier
-• Configured ESLint to support test globals.
-• Set up Prettier for code formatting.
-• Pre-commit hooks were added to ensure linting and formatting before commits.
+I have configured the following tools for the project:
 
-**Testing**
-Unit Tests (Vitest)
-I used Vitest to write unit tests for two functions:
+- **ESLint**: Configured to handle test globals.
+- **Prettier**: Used for code formatting.
+- **Pre-commit Hooks**: Ensures linting and formatting before code is committed.
 
-1. isActivePath Function:
-   • Returns true if paths match or the root path is / or /index.html.
-   • Returns false when paths do not match.
-2. getUserName Function:
-   • Returns the username saved in local storage.
-   • Returns null if no user exists.
+## Testing
 
-End-to-End Tests (Playwright)
-I configured Playwright for e2e testing: 1. Login Test:
-• Valid credentials allow successful login.
-• Invalid credentials display an error message. 2. Navigation Test:
-• Navigates to the home page.
-• Waits for the venue list to load.
-• Verifies “Venue details” text on the details page.
+For testing, I used the following tools and wrote tests as described below:
 
-Scripts
+1. **Unit Testing (Vitest)**:
 
-Here are the npm scripts I used:
-• Install Dependencies:
-´´´bash
-npm install
-´´´
+   - **isActivePath Function**:
+     - Returns `true` if paths match or the root path is `/` or `/index.html`.
+     - Returns `false` when paths do not match.
+   - **getUserName Function**:
+     - Returns the username saved in local storage.
+     - Returns `null` if no user exists.
 
-• Run ESLint:
-´´´bash
-npm run lint
-´´´
+2. **End-to-End Testing (Playwright)**:
+   - **Login Test**:
+     - Valid credentials allow successful login.
+     - Invalid credentials display an error message.
+   - **Navigation Test**:
+     - Navigates to the home page.
+     - Waits for the venue list to load.
+     - Verifies "Venue details" text on the details page.
 
-• Format Code:
-´´´bash
-npm run format
-´´´
+## Scripts
 
-• Run Unit Tests (Vitest):
-´´´bash
-npm run test:unit
-´´´
+I used the following npm scripts during the project:
 
-• Run End-to-End Tests (Playwright):
-´´´bash
-npm run test:e2e
-´´´
+- **Install Dependencies**:
 
----
+  ```bash
+  npm install
+  ```
+
+- **Run ESLint**:
+
+  ```bash
+  npm run lint
+  ```
+
+- **Format Code**:
+
+  ```bash
+  npm run format
+  ```
+
+- **Run Unit Tests (Vitest)**:
+
+  ```bash
+  npm run test
+  ```
+
+- **Run End-to-End Tests (Playwright)**:
+  ```bash
+  npm run test:e2e
+  ```
 
 ## Environment Variables
 
-I created a .env file in the root directory. Here’s an example structure:
-´´´bash
+I created a `.env` file in the root directory. Here’s an example structure:
+
+```plaintext
+VITE_API_URL=<your_api_url>
 LOGIN_USER=<your_username>
 LOGIN_PASS=<your_password>
-´´´
-• .env is added to .gitignore to protect sensitive information.
-• .env.example contains the required variables for reference.
+```
 
----
+- **`.env`** is added to `.gitignore` to protect sensitive information.
+- **`.env.example`** contains the required variables for reference.
 
-### Checklist
+## Checklist
 
-• Configured ESLint to handle test globals.
-• Installed and configured Prettier.
-• Added pre-commit hooks for linting and formatting.
-• Wrote and passed unit tests using Vitest.
-• Wrote and passed end-to-end tests using Playwright.
-• Updated the README with setup and usage details.
-• Added .env to .gitignore and created .env.example.
+- [x] Configured ESLint to handle test globals.
+- [x] Installed and configured Prettier.
+- [x] Added pre-commit hooks for linting and formatting.
+- [x] Wrote and passed unit tests using Vitest.
+- [x] Wrote and passed end-to-end tests using Playwright.
+- [x] Updated the README with setup and usage details.
+- [x] Added `.env` to `.gitignore` and created `.env.example`.
 
----
+## Contributing
 
-### Contributing
+All work was completed in the **`workflow`** branch. To contribute:
 
-1. All work should be done in the workflow branch.
-2. Open a Pull Request (PR) from workflow to the default branch.
-3. Request feedback and make updates as needed.
+1. Open a Pull Request (PR) from `workflow` to the default branch.
+2. Request feedback and incorporate changes as needed.
+
+### Submission
+
+I submitted the open PR link to Moodle. The PR is from the `workflow` branch to the default branch of my forked repository.
