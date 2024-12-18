@@ -94,9 +94,8 @@ I used the following npm scripts during the project:
 I created a `.env` file in the root directory. Here’s an example structure:
 
 ```plaintext
-VITE_API_URL=<your_api_url>
-LOGIN_USER=<your_username>
-LOGIN_PASS=<your_password>
+Test-user-email=<your_username>
+Test-user-pass=<your_password>
 ```
 
 - **`.env`** is added to `.gitignore` to protect sensitive information.
